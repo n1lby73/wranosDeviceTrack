@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Vendor
+from .models import vendor
 
-class VendorSerializer(serializers.Serializer):
+class vendorSerializer(serializers.Serializer):
 
     id = serializers.CharField(read_only=True)  # MongoDB ObjectId
     address = serializers.CharField()
@@ -12,7 +12,7 @@ class VendorSerializer(serializers.Serializer):
 
     def validate_businessName(self, value):
 
-        if Vendor.objects(businessName=value).first():
+        if vendor.objects(businessName=value).first():
 
             raise serializers.ValidationError("Business name already exists.")
 
@@ -20,7 +20,7 @@ class VendorSerializer(serializers.Serializer):
 
     def validate_phoneNumber(self, value):
 
-        if Vendor.objects(phoneNumber=value).first():
+        if vendor.objects(phoneNumber=value).first():
 
             raise serializers.ValidationError("Phone number already exists.")
 
@@ -28,9 +28,9 @@ class VendorSerializer(serializers.Serializer):
 
     def create(self, validated_data):
 
-        vendor = Vendor(**validated_data)
-        vendor.save()
-        return vendor
+        vendors = vendor(**validated_data)
+        vendors.save()
+        return vendors
 
     def update(self, instance, validated_data):
 

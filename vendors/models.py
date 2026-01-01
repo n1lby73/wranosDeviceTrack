@@ -1,7 +1,7 @@
 from mongoengine import Document, StringField, EmailField, BooleanField, DateTimeField, IntField
 from datetime import datetime
 
-class Vendor(Document):
+class vendor(Document):
 
     meta = {
 
