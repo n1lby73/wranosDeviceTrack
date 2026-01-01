@@ -11,7 +11,7 @@ class vendorModel(models.Model):
     verifiedEmail = models.BooleanField(default=False)
     createdAt = models.DateTimeField(auto_now_add=True)
     verifiedAddress = models.BooleanField(default=False)
-    otp = models.CharField(max_length=6, blank=True, null=True)
+    otp = models.IntegerField(max_length=6, blank=True, null=True)
     RCNumber = models.CharField(max_length=7, min_length=7, unique=True)
     phoneNumber = models.CharField(max_length=11, min_length=11, unique=True)
 
