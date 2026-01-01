@@ -21,5 +21,6 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('api/', include('vendors.urls')), # include vendor routes
+    path('api/', include('customers.urls')), # include customer routes
 
 ]
