@@ -6,7 +6,11 @@ class customer(Document):
     meta = {
 
         'dbAlias': 'default',
-        'collection': 'customers'
+        'collection': 'customers',
+        "indexes": [
+            "email",
+            "phoneNumber",
+        ]
     }
 
     address = StringField(required=True)
