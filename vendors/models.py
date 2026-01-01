@@ -16,4 +16,4 @@ class Vendor(Document):
     phoneNumber = StringField(required=True, unique=True, min_length=11, max_length=11)
 
     def __str__(self):
-        return str(self.RCNumber)
+        return str(self.businessName)
