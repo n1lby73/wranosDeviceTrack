@@ -6,7 +6,11 @@ class vendor(Document):
     meta = {
 
         'dbAlias': 'default',
-        'collection': 'vendors'
+        'collection': 'vendors',
+        "indexes": [
+            "businessName",
+            "phoneNumber",
+        ]
     }
 
     address = StringField(required=True)
