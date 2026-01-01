@@ -1,4 +1,3 @@
-# vendors/models.py
 from mongoengine import Document, StringField, EmailField, BooleanField, DateTimeField, IntField
 from datetime import datetime
 
@@ -18,6 +17,3 @@ class Vendor(Document):
 
     def __str__(self):
         return str(self.RCNumber)
-
-    # def getVendorBusinessName(self):
-    #     return str(self.BusinessName)
