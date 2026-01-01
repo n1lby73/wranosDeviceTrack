@@ -49,7 +49,11 @@ INSTALLED_APPS = [
 
     # Manually added apps
 
+    'users',
     'vendors',
+    'products'
+    'customers'
+
 ]
 
 MIDDLEWARE = [
